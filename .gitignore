@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Output del compilador TypeScript
+dist/
+
+# Archivos de configuración local
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Configuración de Vercel local
+.vercel/
