@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 // Endpoints
-app.get("/api", (req: Request, res: Response) => {
+app.get("/hello", (req: Request, res: Response) => {
   console.log("Hola soy el endpoint GET /api");
 
   res.json({ message: "¡Hola desde Express con TypeScript en Vercel!" });
