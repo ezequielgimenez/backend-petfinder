@@ -1,16 +1,9 @@
-import express, { Request, Response } from "express";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
-const app = express();
+export default (req: VercelRequest, res: VercelResponse) => {
+  if (req.method === "GET" && req.url === "/hello") {
+    console.log("Hola soy el endpoint GET /api/hello");
 
-// Middleware
-app.use(express.json());
-
-// Endpoints
-app.get("/", (req: Request, res: Response) => {
-  console.log("Hola soy el endpoint GET /api");
-
-  res.json({ message: "¡Hola desde Express con TypeScript en Vercel!" });
-});
-
-// Exporta el handler para que funcione en Vercel
-export default app;
+    res.json({ message: "¡Hola desde Express con TypeScript en Vercel!" });
+  }
+};
